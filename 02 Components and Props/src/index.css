@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #222;
+  color: aliceblue;
+}
+
+.card-container {
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding-top: 20px;
+  width: 300px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  background-color: #444;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2 1px 1px rgb(113, 112, 112);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+}
+
+/* Base Card Styling */
+.card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  background: #1a1a1a;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 10px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Keeps the blur within the card radius */
+  font-family: sans-serif;
+  user-select: none;
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid rgb(191, 255, 230);
+  object-fit: cover;
+}
+
+.card .name {
+  font-size: 30px;
+  flex-wrap: wrap;
+  font-weight: 800;
+}
+
+.card-description {
+  font-family: cursive;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  max-height: 150px;
+  text-align: justify;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card-description::-webkit-scrollbar {
+  display: none
+}
+
+
+/* Positioning the Text Content */
+.card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 35px;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* optional: adds three dots at the end */
+}
+
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  min-width: 100%;
+}
+
+/* The Progressive Gradient Blur Layer */
+.blur-overlay {
+  position: absolute;
+  inset: 0;
+  /* Stretches to fill the entire card */
+  z-index: 2;
+  /* Sits directly on top of the text */
+  pointer-events: none;
+  /* Allows users to still click or highlight text underneath */
+
+  /* 1. Apply a strong fallback blur */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* 2. Mask the blur so it only shows up at the bottom */
+  mask-image: linear-gradient(to bottom,
+      transparent 50%,
+      /* The top 50% stays perfectly sharp */
+      black 100%
+      /* The blur smoothly fades in over the bottom 50% */
+    );
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent 50%,
+      black 100%);
+}
+
+
+.nav {
+  background-color: #5c5b5b73;
+  color: azure;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 5px solid rgba(157, 154, 154, 0.885);
+  margin-bottom: 20px;
+  backdrop-filter: blur(5px);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
