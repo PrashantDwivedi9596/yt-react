@@ -39,8 +39,9 @@ function App() {
               user.location.state +
               '\n' +
               'Registered As a username  :- \n' +
-              '\t' +
-              user.login.username
+              ' ' +
+              user.login.username +
+              'Random description for all the card so we can assume and get the full strech of the card how it will look when there is a lot of content there to have on a card so it becomes full and to check the scroll effect of each of the things as they are'
             }
           />
         ))}
