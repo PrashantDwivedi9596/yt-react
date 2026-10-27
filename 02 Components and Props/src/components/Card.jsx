@@ -2,8 +2,10 @@ const Card = (props) => {
   return (
     <div className="card">
       <div className="card-content">
-        <img className="avatar" src={props._avatar} alt="" />
-        <h2 className="card-title">{props._name}</h2>
+        <div className="profile">
+          <img className="avatar" src={props._avatar} alt="" />
+          <h2 className="card-title">{props._name}</h2>
+        </div>
         <p className="card-description">{props._desc}</p>
       </div>
 

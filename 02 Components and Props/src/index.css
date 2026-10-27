@@ -50,8 +50,8 @@ body {
 }
 
 .avatar {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   border: 3px solid rgb(191, 255, 230);
   object-fit: cover;
@@ -63,6 +63,50 @@ body {
   font-weight: 800;
 }
 
+
+
+/* Positioning the Text Content */
+.card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 35px;
+  height: 100%;
+  align-self: center;
+  padding: 2px;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  /* height: fit-content; */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* optional: adds three dots at the end */
+
+  line-height: 1.4;
+  max-height: fit-content;
+}
+
 .card-description {
   font-family: cursive;
   /* position: absolute; */
@@ -70,6 +114,7 @@ body {
   width: 100%;
   max-height: 150px;
   min-height: 120px;
+  /* background-color: red; */
   text-align: justify;
   white-space: pre-wrap;
   overflow: auto;
@@ -79,33 +124,6 @@ body {
 
 .card-description::-webkit-scrollbar {
   display: none
-}
-
-
-/* Positioning the Text Content */
-.card-content {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-}
-
-.card-title {
-  margin-top: 0;
-  font-size: 35px;
-  flex-wrap: wrap;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* optional: adds three dots at the end */
 }
 
 .card-description {
